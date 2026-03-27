@@ -9,16 +9,12 @@ public class PlayerProgress {
     private int rank;
     private String avatarUrl;
 
-    public PlayerProgress() {}
-
-    public PlayerProgress(String uuid, String playerName, int completedQuests, int totalQuests, double progressPercentage, int rank, String avatarUrl) {
+    public PlayerProgress(String uuid, String playerName, int completedQuests, int totalQuests, double progressPercentage) {
         this.UUID = uuid;
         this.playerName = playerName;
         this.completedQuests = completedQuests;
         this.totalQuests = totalQuests;
         this.progressPercentage = progressPercentage;
-        this.rank = rank;
-        this.avatarUrl = avatarUrl;
     }
 
     public String getUUID() {

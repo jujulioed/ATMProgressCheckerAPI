@@ -29,7 +29,7 @@ public class LeaderboardService {
         // Entender melhor essa sugestão de organização
         List<PlayerProgress> sorted = players.stream()
                 .sorted(Comparator
-                        .comparingDouble(PlayerProgress::getProgressPercentage)
+                        .comparingDouble(PlayerProgress::getProgressPercentage).reversed()
                         .thenComparing(PlayerProgress::getCompletedQuests, Comparator.reverseOrder())
                         .thenComparing(PlayerProgress::getPlayerName))
                 .toList();
